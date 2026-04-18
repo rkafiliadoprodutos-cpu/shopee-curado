@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@shopee.curado — Curadoria de Achados</title>
+  <meta name="description" content="Curadoria dos melhores achados da Shopee. Só recomendo o que realmente vale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #FDF6F0;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      margin: 0 auto 1rem;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #EE4D2D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #D4AF37;
+      box-shadow: 0 0 0 5px rgba(238,77,45,0.12);
+    }
+
+    .avatar-wrap svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Nome e bio */
+    .profile-name {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A1A2E;
+      margin-bottom: 6px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    /* Selo curado */
+    .selo {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #fff;
+      border: 1px solid #D4AF37;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 11px;
+      color: #8B6914;
+      font-weight: 500;
+      margin: 8px 0 24px;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(238,77,45,0.10);
+    }
+
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .ic-shopee  { background: #FDECEA; }
+    .ic-moda    { background: #FDF6F0; }
+    .ic-beleza  { background: #FEF0F7; }
+    .ic-casa    { background: #EEF8F3; }
+    .ic-tech    { background: #EBF4FE; }
+    .ic-vip     { background: #FFFBEA; }
+
+    .link-text { text-align: left; flex: 1; }
+
+    .link-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1A1A2E;
+    }
+
+    .link-sub {
+      font-size: 11px;
+      color: #999;
+      margin-top: 1px;
+    }
+
+    .link-arrow {
+      font-size: 18px;
+      color: #ccc;
+      font-weight: 400;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: rgba(0,0,0,0.07);
+      margin: 4px 0;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 11px;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    .footer span {
+      color: #EE4D2D;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Avatar -->
+    <div class="avatar-wrap">
+      <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="16" r="8" fill="white" opacity="0.92"/>
+        <path d="M9 44c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none" opacity="0.92"/>
+        <path d="M34 22l2.5 2.5 6-6" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- Nome e bio -->
+    <div class="profile-name">@shopee.curado</div>
+    <div class="profile-bio">
+      Curadoria dos melhores achados da Shopee<br>
+      Só recomendo o que realmente vale
+    </div>
+
+    <!-- Selo -->
+    <div class="selo">
+      <svg width="11" height="11" viewBox="0 0 11 11">
+        <polygon points="5.5,1 6.9,4.1 10,4.5 7.7,6.7 8.4,9.9 5.5,8.3 2.6,9.9 3.3,6.7 1,4.5 4.1,4.1" fill="#D4AF37"/>
+      </svg>
+      Produtos verificados todo dia
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-shopee">🛍️</div>
+        <div class="link-text">
+          <div class="link-title">Todos os achados de hoje</div>
+          <div class="link-sub">Produtos curados da Shopee</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-moda">👗</div>
+        <div class="link-text">
+          <div class="link-title">Moda & Acessórios</div>
+          <div class="link-sub">Roupas, calçados e acessórios</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-beleza">✨</div>
+        <div class="link-text">
+          <div class="link-title">Beleza & Cuidados</div>
+          <div class="link-sub">Skin care, maquiagem e cabelo</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-casa">🏠</div>
+        <div class="link-text">
+          <div class="link-title">Casa & Decoração</div>
+          <div class="link-sub">Utilidades e organização</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-tech">📱</div>
+        <div class="link-text">
+          <div class="link-title">Tech & Gadgets</div>
+          <div class="link-sub">Eletrônicos e acessórios digitais</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+      <div class="divider"></div>
+
+      <a class="link-btn" href="#" target="_blank">
+        <div class="link-icon ic-vip">⭐</div>
+        <div class="link-text">
+          <div class="link-title">Grupo VIP — Top Picks</div>
+          <div class="link-sub">Só os melhores achados do dia</div>
+        </div>
+        <div class="link-arrow">›</div>
+      </a>
+
+    </div>
+
+    <div class="footer">
+      <span>@shopee.curado</span> · Curadoria com critério
+    </div>
+
+  </div>
+</body>
+</html>
